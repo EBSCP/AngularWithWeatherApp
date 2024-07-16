@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<body>
+  <div class =" Container">
+    <h1>Today How is the Weather?</h1>
+    <div class = "container-Card">
+      <input id="container-font" type="text" placeholder="Please Enter A city!!!!!" [(ngModel)]="cityName">
+      <button (click)="searchWeather()"><i class="fas fa-search"></i></button>
+        <div id="container-Weather">
+            <div class="container-city">{{ weatherData.name }}</div>
+            <div class="container-degree">{{ weatherData.main?.temp }} °C</div>
+            <div class="container-Hava">{{ weatherData.weather[0]?.description }}</div>
+            <div class="container-Max">Max: {{ weatherData.main?.temp_max }} °C - Min: {{ weatherData.main?.temp_min }} °C</div>
+        </div>
+    </div>
+</div>
+</body>
